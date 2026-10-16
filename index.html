@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>Rick & Morty | Multiverse Explorer</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://rickandmortyapi.com">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">🛸</span>
+      <span>RICK<span class="green">&</span>MORTY</span>
+    </a>
+    <span class="nav-tag">MULTIVERSE DATABASE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label">
+        <span class="pulse"></span>
+        SISTEMA INTERDIMENSIONAL ACTIVO
+      </div>
+
+      <h1>EXPLORA EL <span>MULTIVERSO</span></h1>
+      <p class="hero-text">
+        Cada dimensión tiene una historia. Encuentra a sus habitantes.
+      </p>
+
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search"
+          placeholder="Busca a Rick, Morty, Summer..."
+          aria-label="Buscar personaje por nombre"
+          autocomplete="off">
+        <button id="searchBtn" class="search-btn">BUSCAR ↗</button>
+      </div>
+
+      <div class="quick-search">
+        <span>BUSQUEDAS RÁPIDAS:</span>
+        <button class="quick-btn" data-name="Rick">Rick</button>
+        <button class="quick-btn" data-name="Morty">Morty</button>
+        <button class="quick-btn" data-name="Summer">Summer</button>
+        <button class="quick-btn" data-name="Beth">Beth</button>
+      </div>
+    </section>
+
+    <section class="database">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">ARCHIVO GALÁCTICO / 001</div>
+          <h2>Base de datos <span>de personajes</span></h2>
+        </div>
+        <div class="total-box">
+          <span class="total-dot"></span>
+          <span id="totalCount">CONECTANDO...</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <label class="filter-field">
+          <span>ESTADO</span>
+          <select id="statusFilter">
+            <option value="">Todos los estados</option>
+            <option value="alive">Vivo</option>
+            <option value="dead">Muerto</option>
+            <option value="unknown">Desconocido</option>
+          </select>
+        </label>
+
+        <label class="filter-field">
+          <span>ESPECIE</span>
+          <select id="speciesFilter">
+            <option value="">Todas las especies</option>
+            <option value="Human">Humano</option>
+            <option value="Alien">Alienígena</option>
+            <option value="Humanoid">Humanoide</option>
+            <option value="Robot">Robot</option>
+            <option value="Animal">Animal</option>
+            <option value="Mythological Creature">Criatura mitológica</option>
+            <option value="Poopybutthole">Poopybutthole</option>
+          </select>
+        </label>
+
+        <label class="filter-field">
+          <span>GÉNERO</span>
+          <select id="genderFilter">
+            <option value="">Todos los géneros</option>
+            <option value="female">Femenino</option>
+            <option value="male">Masculino</option>
+            <option value="genderless">Sin género</option>
+            <option value="unknown">Desconocido</option>
+          </select>
+        </label>
+
+        <button id="clearFilters" class="clear-btn">↺ Limpiar</button>
+      </div>
+
+      <div class="results-line">
+        <p id="resultsText">Preparando exploración...</p>
+        <span class="api-label">● API ONLINE</span>
+      </div>
+
+      <div id="characterGrid" class="character-grid"></div>
+
+      <div id="pagination" class="pagination"></div>
+
+      <p class="footer-note">
+        DATOS SUMINISTRADOS POR RICK AND MORTY API · FAN PROJECT
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>DIMENSION C-137</span>
+    <span>HECHO PARA EXPLORADORES DEL MULTIVERSO ✦</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
